@@ -129,10 +129,10 @@
     .example .bar-row { display: flex; gap: 6px; }
 
     .shots { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 16px; -webkit-overflow-scrolling: touch; }
-    .shot { flex: 0 0 min(260px, 72vw); scroll-snap-align: center; }
+    .shot { flex: 0 0 min(260px, 72vw); scroll-snap-align: start; }
     .shot img { border-radius: 22px; border: 1px solid var(--border); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); }
     .shot p { text-align: center; color: var(--muted); margin: 12px 0 0; font-size: 0.95rem; }
-    @media (min-width: 860px) { .shots { justify-content: center; overflow: visible; } }
+    @media (min-width: 860px) { .shots { justify-content: space-between; overflow: visible; } .shot { flex: 0 1 190px; } }
 
     .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     @media (max-width: 820px) { .features { grid-template-columns: 1fr 1fr; } }
@@ -202,7 +202,7 @@
         <p class="alt only-phone">Or <a href="https://foootie.github.io/foootie/">play in your browser</a>. Your account works everywhere.</p>
       </div>
 
-      <div class="phone"><img src="img/shot1.jpg" alt="A round of fixtures in Foootie with home, draw, away and Joker picks" width="540" height="1080" /></div>
+      <div class="phone"><img src="img/shot1.jpg" alt="A round of fixtures in Foootie with home, draw, away and Joker picks" width="540" height="1168" /></div>
     </div>
   </div>
 
@@ -262,11 +262,13 @@
   <section class="alt-bg">
     <div class="wrap">
       <h2>See it in action</h2>
-      <p class="sub">Live scores, round tables and a season-long Medals Table.</p>
+      <p class="sub">Live scores, tables, head-to-heads and form.</p>
       <div class="shots">
-        <div class="shot"><img src="img/shot1.jpg" alt="Fixtures with live scores and picks" loading="lazy" width="540" height="1080" /><p>Your picks and live scores</p></div>
-        <div class="shot"><img src="img/shot2.jpg" alt="Round standings with a points breakdown" loading="lazy" width="540" height="1080" /><p>Round table with points breakdown</p></div>
-        <div class="shot"><img src="img/shot3.jpg" alt="Medals Table" loading="lazy" width="540" height="1080" /><p>The Medals Table</p></div>
+        <div class="shot"><img src="img/shot1.jpg" alt="A round of fixtures with picks, live scores and points" loading="lazy" width="540" height="1168" /><p>Your picks and live scores</p></div>
+        <div class="shot"><img src="img/shot2.jpg" alt="Round standings with each player's points breakdown" loading="lazy" width="540" height="1168" /><p>Round table and standings</p></div>
+        <div class="shot"><img src="img/shot3.jpg" alt="Superleague head-to-head results and table" loading="lazy" width="540" height="1168" /><p>Superleague head-to-heads</p></div>
+        <div class="shot"><img src="img/shot4.jpg" alt="Form guide for both teams in a fixture" loading="lazy" width="540" height="1168" /><p>Form guide for every fixture</p></div>
+        <div class="shot"><img src="img/shot5.jpg" alt="A team's results and league position through the season" loading="lazy" width="540" height="1168" /><p>League table and team history</p></div>
       </div>
     </div>
   </section>
@@ -279,9 +281,12 @@
         <div class="card feature"><div class="icon" aria-hidden="true">🏆</div><h3>Competitions</h3><p>Play the Premier League, the Championship, or go all-in and play both.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">👥</div><h3>Private leagues</h3><p>Create your own league and invite friends, family or the office. You still play against everyone else too.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">⚔️</div><h3>Superleague</h3><p>A head-to-head round robin inside your private league. Win your match-up each week and top the table.</p></div>
-        <div class="card feature"><div class="icon" aria-hidden="true">📊</div><h3>Charts and stats</h3><p>Compare your scoring breakdown with other players and see who's on form.</p></div>
+        <div class="card feature"><div class="icon" aria-hidden="true">📊</div><h3>Charts and stats</h3><p>Compare your scoring breakdown with other players, tap anyone to see their game, and chase medals all season.</p></div>
+        <div class="card feature"><div class="icon" aria-hidden="true">📈</div><h3>Form guide</h3><p>Check both teams' recent results before you pick, plus the live league table and each team's season so far.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">🔔</div><h3>Reminders</h3><p>Turn on notifications and you'll never miss a round or forget your picks.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">🎨</div><h3>Make it yours</h3><p>Themes, colours, font size and language (English, French, German and Spanish).</p></div>
+        <div class="card feature"><div class="icon" aria-hidden="true">📱</div><h3>Play anywhere</h3><p>iPhone, Android or your browser. One account works on all of them.</p></div>
+        <div class="card feature"><div class="icon" aria-hidden="true">🆓</div><h3>Free to play</h3><p>No cost, no catch. Just bragging rights.</p></div>
       </div>
     </div>
   </section>
