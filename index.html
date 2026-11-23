@@ -43,7 +43,7 @@
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.25rem; letter-spacing: 0.3px; }
     nav a { color: var(--muted); text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.95rem; }
     nav a:hover { color: var(--text); }
-    @media (max-width: 640px) { nav { display: none; } }
+    @media (max-width: 640px) { header { display: none; } .hero { padding-top: env(safe-area-inset-top); } }
 
     /* Hero */
     .hero {
