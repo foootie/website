@@ -129,11 +129,20 @@
     .example { margin-top: 18px; display: grid; grid-template-columns: 1fr auto; gap: 8px 16px; align-items: center; font-size: 0.95rem; }
     .example .bar-row { display: flex; gap: 6px; }
 
+    /* Private leagues & Superleague */
+    .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+    .split .phone { transform: rotate(-3deg); }
+    .split .card + .card { margin-top: 18px; }
+    @media (max-width: 820px) {
+      .split { grid-template-columns: 1fr; }
+      .split .phone { transform: none; order: 2; }
+    }
+
     .shots { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 16px; -webkit-overflow-scrolling: touch; }
     .shot { flex: 0 0 min(260px, 72vw); scroll-snap-align: start; }
     .shot img { border-radius: 22px; border: 1px solid var(--border); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); }
     .shot p { text-align: center; color: var(--muted); margin: 12px 0 0; font-size: 0.95rem; }
-    @media (min-width: 860px) { .shots { justify-content: space-between; overflow: visible; } .shot { flex: 0 1 190px; } }
+    @media (min-width: 860px) { .shots { justify-content: space-between; overflow: visible; } .shot { flex: 0 1 220px; } }
 
     .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     @media (max-width: 820px) { .features { grid-template-columns: 1fr 1fr; } }
@@ -166,6 +175,7 @@
     <nav>
       <a href="#how">How to play</a>
       <a href="#scoring">Scoring</a>
+      <a href="#leagues">Leagues</a>
       <a href="#features">Features</a>
       <a href="#get">Get Foootie</a>
     </nav>
@@ -260,39 +270,54 @@
     </div>
   </section>
 
-  <section class="alt-bg">
+
+  <section id="leagues" class="alt-bg">
+    <div class="wrap split">
+      <div>
+        <h2>Private leagues and Superleague</h2>
+        <p class="sub">Play everyone, and your mates.</p>
+        <div class="card">
+          <h3>👥 Private leagues</h3>
+          <p>Create your own league in any competition and invite friends, family or the office. The tables and stats show just your league's members, and you still play against everyone else too. Switch leagues with one tap at the top of the screen.</p>
+        </div>
+        <div class="card">
+          <h3>⚔️ Superleague</h3>
+          <p>A round-robin inside your private league. Each round you're drawn against another player. A correct pick scores a goal if your opponent got it wrong, and the most goals wins. Results go into a league table with 3 points for a win and 1 for a draw. The season lasts long enough for everyone to play everyone once.</p>
+        </div>
+      </div>
+      <div class="phone"><img src="img/shot3.jpg" alt="A private league's Superleague: live head-to-head results and the Superleague table" loading="lazy" width="540" height="1168" /></div>
+    </div>
+  </section>
+
+  <section>
     <div class="wrap">
       <h2>See it in action</h2>
-      <p class="sub">Live scores, tables, head-to-heads and form.</p>
+      <p class="sub">Live scores, tables, form and team history.</p>
       <div class="shots">
         <div class="shot"><img src="img/shot1.jpg" alt="A round of fixtures with picks, live scores and points" loading="lazy" width="540" height="1168" /><p>Your picks and live scores</p></div>
         <div class="shot"><img src="img/shot2.jpg" alt="Round standings with each player's points breakdown" loading="lazy" width="540" height="1168" /><p>Round table and standings</p></div>
-        <div class="shot"><img src="img/shot3.jpg" alt="Superleague head-to-head results and table" loading="lazy" width="540" height="1168" /><p>Superleague head-to-heads</p></div>
         <div class="shot"><img src="img/shot4.jpg" alt="Form guide for both teams in a fixture" loading="lazy" width="540" height="1168" /><p>Form guide for every fixture</p></div>
         <div class="shot"><img src="img/shot5.jpg" alt="A team's results and league position through the season" loading="lazy" width="540" height="1168" /><p>League table and team history</p></div>
       </div>
     </div>
   </section>
 
-  <section id="features">
+  <section id="features" class="alt-bg">
     <div class="wrap">
       <h2>More than a prediction game</h2>
       <p class="sub">Everything you need to keep the banter going all season.</p>
       <div class="features">
         <div class="card feature"><div class="icon" aria-hidden="true">🏆</div><h3>Competitions</h3><p>Play the Premier League, the Championship, or go all-in and play both.</p></div>
-        <div class="card feature"><div class="icon" aria-hidden="true">👥</div><h3>Private leagues</h3><p>Create your own league and invite friends, family or the office. You still play against everyone else too.</p></div>
-        <div class="card feature"><div class="icon" aria-hidden="true">⚔️</div><h3>Superleague</h3><p>A head-to-head round robin inside your private league. Win your match-up each week and top the table.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">📊</div><h3>Charts and stats</h3><p>Compare your scoring breakdown with other players, tap anyone to see their game, and chase medals all season.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">📈</div><h3>Form guide</h3><p>Check both teams' recent results before you pick, plus the live league table and each team's season so far.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">🔔</div><h3>Reminders</h3><p>Turn on notifications and you'll never miss a round or forget your picks.</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">🎨</div><h3>Make it yours</h3><p>Themes, colours, font size and language (English, French, German and Spanish).</p></div>
         <div class="card feature"><div class="icon" aria-hidden="true">📱</div><h3>Play anywhere</h3><p>iPhone, Android or your browser. One account works on all of them.</p></div>
-        <div class="card feature"><div class="icon" aria-hidden="true">🆓</div><h3>Free to play</h3><p>No cost, no catch. Just bragging rights.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="get" class="alt-bg final">
+  <section id="get" class="final">
     <div class="wrap">
       <h2>Ready for kick-off?</h2>
       <p class="sub">Free to play. Sign in with Google, Apple or your email address.</p>
